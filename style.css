@@ -27,6 +27,9 @@
       color:#f76e2a;
       }
 
+
+
+
       h2{
         font-size:20px;
         margin-bottom:30px;
@@ -83,6 +86,51 @@
         color: #f9ce70;
         transition:300ms;
       }
+
+      @keyframes drift{
+        from { transform: translateY(100px);
+        opacity:0;
+      }
+
+      to {
+        transform: translateY(0px);
+        opacity:1;
+      }
+}
+
+  h1:before, h1:after {
+    position:absolute;
+    font-family: sans-serif;
+    mix-blend-mode: overlay;
+    color:#f7b162;
+    font-size:25rem;
+    opacity: .9;
+    animation-name: drift;
+    animation-duration:5s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-delay: 1s;
+    animation-direction: alternate;
+
+  }
+
+
+      h1:before{
+        content:"\2318";
+        right:15vw;
+        top:15vh;
+        /animation-delay:-200ms;/
+      }
+
+      h1:after{
+        content:"P";
+        right:8vw;
+        top:35vh;
+        /animation-delay:-200ms;/
+
+      }
+
+
 
       .chapter{
         margin-top:50px;
